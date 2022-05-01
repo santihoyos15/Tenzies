@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0B2434;
+    padding: 20px;
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    background-color: #F5F5F5;
+    height: 90vh;
+    max-width: 800px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.instructions {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+}
+
+.dice-container {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 20px;
+}
+
+.die-face {
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    justify-items: center;
+    align-items: center;
+}
+
+[class^="die-dot"] {
+    background: black;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.die-face .die-dot1{
+    grid-column: 2;
+    grid-row: 2;
+}
+.die-face .die-dot2{
+    grid-column: 1;
+    grid-row: 1;
+}
+.die-face .die-dot3{
+    grid-column: 1;
+    grid-row: 2;
+}
+.die-face .die-dot4{
+    grid-column: 1;
+    grid-row: 3;
+}
+.die-face .die-dot5{
+    grid-column: 3;
+    grid-row: 1;
+}
+.die-face .die-dot6{
+    grid-column: 3;
+    grid-row: 2;
+}
+.die-face .die-dot7{
+    grid-column: 3;
+    grid-row: 3;
+}
+.die-num {
+    font-size: 2rem;
+}
+.roll-dice {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5035FF;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+}
+
+.roll-dice:focus {
+    outline: none;
+}
+
+.roll-dice:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
