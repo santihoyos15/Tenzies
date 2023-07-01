@@ -33,25 +33,25 @@ const diceShapes = [
     ],
 ]
 
+const buildDieDots = (dieToRender) => {
+    const dieDotsElements = [];
+
+    for (let i = 0; i < dieToRender.length; i++){
+	for (let j = 0; j < dieToRender[i].length; j++){
+	    const dieDot = dieToRender[j][i];
+	    if (dieDot){
+		dieDotsElements.push(<div className={`die-dot${i}${j}`}></div>)
+	    }
+	}
+    }
+
+    return dieDotsElements;
+}
+
 export default function Die(props) {
     const styles = {backgroundColor: props.isHeld ? "#59E391" : "white"}
     
-    const dieToRender = diceShapes[props.value];
-
-    const buildDieDots = () => {
-        const dieDotsElements = [];
-
-        for (let i = 0; i < dieToRender.length; i++){
-            for (let j = 0; j < dieToRender[i].length; j++){
-                const dieDot = dieToRender[i][j];
-                if (dieDot){
-                    dieDotsElements.push(<div className={`die-dot${i}${j}`}></div>)
-                }
-            }
-        }
-
-        return dieDotsElements;
-    }
+    const dieToRender = diceShapes[props.value - 1];
     
     return (
         <div 
@@ -59,7 +59,7 @@ export default function Die(props) {
             style={styles}
             onClick={props.holdDice}
         >
-            {buildDieDots()};
+            {buildDieDots(dieToRender)}
         </div>
     )
 }
