@@ -65,37 +65,47 @@ main {
     border-radius: 50%;
 }
 
-.die-face .die-dot1{
+/* Die naming follows bidimensional array index order [0,0] [0,1] [0,2] etc */
+
+.die-face .die-dot00 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.die-face .die-dot01 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.die-face .die-dot02 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.die-face .die-dot12 {
     grid-column: 2;
     grid-row: 2;
 }
-.die-face .die-dot2{
-    grid-column: 1;
-    grid-row: 1;
-}
-.die-face .die-dot3{
-    grid-column: 1;
-    grid-row: 2;
-}
-.die-face .die-dot4{
-    grid-column: 1;
-    grid-row: 3;
-}
-.die-face .die-dot5{
+
+.die-face .die-dot20 {
     grid-column: 3;
     grid-row: 1;
 }
-.die-face .die-dot6{
+
+.die-face .die-dot21 {
     grid-column: 3;
     grid-row: 2;
 }
-.die-face .die-dot7{
+
+.die-face .die-dot22 {
     grid-column: 3;
     grid-row: 3;
 }
+
 .die-num {
     font-size: 2rem;
 }
+
 .roll-dice {
     height: 50px;
     width: 150px;
